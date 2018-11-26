@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Study guide for the Oracle Certified Professional, Java SE 8 Programmer Exam ">
+    <title>Java 8 Programmer II Study Guide: Exam 1Z0-809</title>
+    <link href="css/code.css" rel="stylesheet" type="text/css" />
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+
+    <script src="js/common-sections.js"></script>
+</head>
+
+<body>
+    <div class="header">
+        <div class="title-container">
+            <div class="chapter-title">
+
+                <h1><i class="chapter">Chapter ELEVEN</i><br />
+				Method References</h1>
+
+                <p><br /></p>
+
+                <h3 style="text-align: center;"><i>Exam Objectives</i></h3>
+
+                <p style="text-align: center;"><i>Use method references with Streams.</i><br /></p>
+
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container">
+
+        <div class="column">
+
+            <h2>Answers</h2>
+
+            <p><b>1. The correct answer is B.</b><br /></p>
+
+            <p><code class="java hljs">Runnable r = Question_11_1::print;</code></p>
+
+            <p>It's equivalent to:<br /></p>
+
+            <p><code class="java hljs">Runnable r = () -&gt; Question_11_1.print();</code></p>
+
+            <p>And equivalent to:<br /></p>
+
+            <p><code class="java hljs">Runnable r = <span class="hljs-keyword">new</span> Runnable() {<br />
+  &nbsp; &nbsp; &nbsp;<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">run</span><span class="hljs-params">()</span></span> {<br />
+  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Question_11_1.print();<br />
+  &nbsp; &nbsp; &nbsp;}<br />
+  }</code></p>
+
+            <p>The <code>print()</code> method returns another <code>Runnable</code> instance, but as this is not saved or executed, nothing is done.</p>
+
+            <p><br /></p>
+
+            <p><b>2. The correct answer is A.</b><br /></p>
+
+            <p><code class="java hljs">Consumer c = Question_11_2::print;</code></p>
+
+            <p>It's equivalent to:<br /></p>
+
+            <p><code class="java hljs">Consumer c = (Question_11_2 q) -&gt; q.print();</code></p>
+
+            <p>And equivalent to:<br /></p>
+
+            <p><code class="java hljs">Consumer c = <span class="hljs-keyword">new</span> Consumer() {<br />
+  &nbsp; &nbsp; &nbsp;<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">accept</span><span class="hljs-params">(Question_11_2 q)</span></span> {<br />
+  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;q.print();<br />
+  &nbsp; &nbsp; &nbsp;}<br />
+  }</code></p>
+
+            <p>That when executed, it just prints <code>"Hi"</code>.</p>
+
+            <p><br /></p>
+
+            <p><b>3. The correct answers are A and C.</b><br /> Option A is true. You can have a method reference to a constructor.<br /> Option B is false. Method references replace one-method lambda expressions only.<br /> Option C is true. Arguments of the method are never passed to a method reference.<br /> Option D is false. The <code>::</code> operator is just used in method references.</p>
+
+            <p><br /></p>
+
+            <p><b>4. The correct answer is D.</b><br /> Option A and B are not valid method references.<br /> Option C would be right if the method <code>drive(int)</code> were <code>static</code>, but because it's an instance method, option D is the right one.</p>
+
+            <p><br /></p>
+
+            <p><b>5. The correct answer is B.</b><br /></p>
+
+            <p><code class="java hljs">Runnable r = Question_11_5::<span class="hljs-keyword">new</span>;</code></p>
+
+            <p>It's equivalent to:<br /></p>
+
+            <p><code class="java hljs">Runnable r = () -&gt; <span class="hljs-keyword">new</span> Question_11_5();</code></p>
+
+            <p>And equivalent to:<br /></p>
+
+            <p><code class="java hljs">Runnable r = <span class="hljs-keyword">new</span> Runnable() {<br />
+  &nbsp; &nbsp; &nbsp;<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">run</span><span class="hljs-params">()</span></span> {<br />
+  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="hljs-keyword">new</span> Question_11_5();<br />
+  &nbsp; &nbsp; &nbsp;}<br />
+  }</code></p>
+
+            <p>However, <code>r.run()</code> is never executed, so nothing is printed.</p>
+
+            <p><br /></p>
+
+            <p><b>6. The correct answer is D.</b><br /> Compilation fails because<br /></p>
+
+            <p><code class="java hljs">BiFunction&lt;String, String, Test&gt; f = Test::<span class="hljs-keyword">new</span>;</code></p>
+
+            <p>It's equivalent to:<br /></p>
+
+            <p><code class="java hljs">BiFunction&lt;String, String, Test&gt; f =<br />
+  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;(String s1, String s2) -&gt; <span class="hljs-keyword">new</span> Test(s1, s2);</code></p>
+
+            <p>And class <code>Test</code> only has constructors that take zero and one arguments.</p>
+
+            <p><br /></p>
+
+            <p><b>7. The correct answers are A and D.</b><br /> Option A is correct because the private constructor can be used inside the <code>main</code> method.<br /> Option B is wrong because with an <code>UnaryOperator</code>, a parameter of type <code>Question_11_7</code> is expected.<br /> Option C is wrong because with a <code>Consumer</code> a parameter of type <code>Question_11_7</code> is expected, and nothing is returned.<br /> Option D is correct because a <code>Supplier</code> returns an instance of <code>Question_11_7</code> by calling the <code>static</code> method <code>create()</code>.</p>
+            <p><b><br /></b></p>
+
+        </div>
+    </div>
+
+    <footer></footer>
+
+</body>
+
+</html>
