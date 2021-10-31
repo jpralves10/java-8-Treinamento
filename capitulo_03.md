@@ -574,38 +574,6 @@ class Computer {
 Uma vez que pode causar confusão, é melhor evitá-lo e usar nomes de variáveis ​​descritivos.
 
 
-### Key Points
-
-* As classes internas são declaradas dentro de outra classe. Existem quatro tipos deles: classes estáticas, não estáticas, locais e anônimas.
-* As classes estáticas são apenas classes internas marcadas com a palavra-chave static. No entanto, eles se comportam mais como uma classe de nível superior do que como uma classe interna.
-* Você não precisa de uma instância da classe envolvente para instanciar uma classe estática:
-```
-EnclosingClass.StaticClass sc = new EnclosingClass.StaticClass();
-```
-* Uma classe estática não pode acessar membros não estáticos da classe delimitadora, pois não requer uma instância da classe delimitadora para usá-la.
-* Uma classe interna (não estática) é como qualquer outro membro da classe envolvente, de modo que pode ser marcada com qualquer modificador de acesso.
-* Fora dos métodos ou blocos de instância da classe delimitadora, para instanciar uma classe interna, você deve primeiro criar uma instância da classe delimitadora e, em seguida:
-```
-EnclosingClass ec = new EnclosingClass();
-EnclosingClass.InnerClass ic = ec.new InnerClass();
-```
-* Uma classe local é definida dentro de um método ou bloco da classe envolvente.
-* Os únicos modificadores que se aplicam a uma classe local são abstratos e finais (mas não ao mesmo tempo).
-* Você só pode usar uma classe local no método ou bloco onde a definiu, e somente após sua declaração.
-* Uma classe local pode acessar os membros de uma classe como qualquer outro membro da classe (regras estáticas ainda se aplicam).
-* No entanto, uma classe local só pode acessar os parâmetros e variáveis ​​locais de um método se eles forem finais ou efetivamente finais.
-* Efetivamente final significa que uma variável não pode ser modificada após sua inicialização, mesmo que não esteja explicitamente marcada como final.
-* As classes anônimas não têm nome e estendem uma classe existente ou implementam uma interface:
-```
-ExistingClass ac = new ExistingClass() {
-   // Definition goes here
-};
-```
-* Classes anônimas não podem ter construtores.
-* As classes anônimas têm as mesmas regras que as classes locais em relação ao acesso aos membros da classe envolvente e às variáveis ​​locais de um método.
-* Os únicos métodos que você pode chamar em uma classe anônima são aqueles definidos no tipo de referência (a superclasse ou a interface), embora as classes anônimas possam definir seus próprios métodos.
-
-
 ### Self Test
 
 1. Given:

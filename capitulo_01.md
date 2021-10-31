@@ -483,24 +483,6 @@ In summary:
 * Uma classe final não pode ser subclassificada.
 
 
-### Key Points
-
-* Encapsulamento é a capacidade de ocultar ou proteger os dados de um objeto. Java oferece suporte a quatro modificadores de acesso: público, privado, protegido, padrão (quando nada é especificado, também chamado de nível de pacote).
-* Se algo for declarado como público, ele pode ser acessado de qualquer outra classe de nosso aplicativo. Qualquer classe, independentemente do pacote ou módulo em que está definida.
-* Se algo está definido como privado, ele só pode ser acessado dentro da classe que o define. Não de outras classes nos mesmos pacotes e não de classes que herdam a classe. privado é o modificador de acesso mais restritivo.
-* Se algo está definido como protegido, só pode ser acessado pela classe que o define, suas subclasses e classes do mesmo pacote. Não importa se a subclasse está em outro pacote, o que torna esse modificador menos restritivo que privado.
-* Se algo não tiver um modificador, ele terá acesso padrão, também conhecido como acesso de pacote, porque só pode ser acessado por classes dentro do mesmo pacote. Se uma subclasse for definida em outro pacote, ela não poderá ver o atributo ou método de acesso padrão. Essa é a única diferença com o modificador protegido, tornando-o mais restritivo.
-* Uma classe singleton garante que haja apenas uma instância da classe durante o tempo de vida do aplicativo.
-* Um objeto imutável ... não pode alterar seus valores após ser criado.
-* Um objeto imutável ... Define todas as suas propriedades por meio de um construtor
-* Um objeto imutável ... Não define métodos setter
-* Um objeto imutável ... Declara todos os seus atributos privados (e às vezes finais)
-* Um objeto imutável ... Tem uma classe declarada final para evitar herança
-* Um objeto imutável ... Protege o acesso a qualquer estado mutável. Por exemplo, se ele tiver um membro da Lista, a referência não pode ser acessível fora do objeto ou uma cópia deve ser retornada (o mesmo se aplica se o conteúdo do objeto deve ser alterado)
-* A palavra-chave estática pode ser aplicada a atributos, métodos, blocos e classes. Um membro estático pertence à classe em que é declarado, não a uma instância específica.
-* A palavra-chave final pode ser aplicada a variáveis ​​(para que não possam alterar seus valores depois de inicializados), métodos (para que não possam ser substituídos) e classes (para que não possam ser subclasses).
-
-
 ### Auto teste
 
 1. Given:
