@@ -1,10 +1,10 @@
-# 1º Capítulo - Encapsulation and Immutable Classes
+# 1. Encapsulation and Immutable Classes
 
 ## Objetivos do Exame
 
-*Implement encapsulation.* <bt>
-*Create and use singleton classes and immutable classes.* <bt>
-*Develop code that uses static keyword on initialize blocks, variables, methods, and classes.* <bt>
+*Implement encapsulation.* <br>
+*Create and use singleton classes and immutable classes.* <br>
+*Develop code that uses static keyword on initialize blocks, variables, methods, and classes.* <br>
 *Develop code that uses final keyword.*
 
 ### Encapsulation
@@ -483,7 +483,7 @@ In summary:
 * Uma classe final não pode ser subclassificada.
 
 
-### Pontos Chaves
+### Key Points
 
 * Encapsulamento é a capacidade de ocultar ou proteger os dados de um objeto. Java oferece suporte a quatro modificadores de acesso: público, privado, protegido, padrão (quando nada é especificado, também chamado de nível de pacote).
 * Se algo for declarado como público, ele pode ser acessado de qualquer outra classe de nosso aplicativo. Qualquer classe, independentemente do pacote ou módulo em que está definida.
@@ -491,7 +491,7 @@ In summary:
 * Se algo está definido como protegido, só pode ser acessado pela classe que o define, suas subclasses e classes do mesmo pacote. Não importa se a subclasse está em outro pacote, o que torna esse modificador menos restritivo que privado.
 * Se algo não tiver um modificador, ele terá acesso padrão, também conhecido como acesso de pacote, porque só pode ser acessado por classes dentro do mesmo pacote. Se uma subclasse for definida em outro pacote, ela não poderá ver o atributo ou método de acesso padrão. Essa é a única diferença com o modificador protegido, tornando-o mais restritivo.
 * Uma classe singleton garante que haja apenas uma instância da classe durante o tempo de vida do aplicativo.
-* Um objeto imutável não pode alterar seus valores após ser criado.
+* Um objeto imutável ... não pode alterar seus valores após ser criado.
 * Um objeto imutável ... Define todas as suas propriedades por meio de um construtor
 * Um objeto imutável ... Não define métodos setter
 * Um objeto imutável ... Declara todos os seus atributos privados (e às vezes finais)
@@ -516,18 +516,18 @@ public class Question_1_1 {
 }
 ```
 
-What is the result?
-A. 01
-B. Compilation fails on the line marked as // 1
-C. Compilation fails on the line marked as // 2
-D. Compilation fails on the line marked as // 3
+What is the result? <br>
+A. 01 <br>
+B. Compilation fails on the line marked as // 1 <br>
+C. Compilation fails on the line marked as // 2 <br>
+D. Compilation fails on the line marked as // 3 <br>
 E. Compilation fails on the line marked as // 4
 
 
-2. Which of the following state the correct order from the more restricted modifier to the least restrictive?
-A. private, default, public, protected
-B. protected, private, default, public
-C. default, protected, private, public
+2. Which of the following state the correct order from the more restricted modifier to the least restrictive? <br>
+A. private, default, public, protected <br>
+B. protected, private, default, public <br>
+C. default, protected, private, public <br>
 D. private, default, protected, public
 
 
@@ -541,10 +541,10 @@ public final class Question_1_3 {
 }
 ```
 
-Which of the following is true?
-A. The class is immutable
-B. The class is not immutable
-C. Compilation fails
+Which of the following is true? <br>
+A. The class is immutable <br>
+B. The class is not immutable <br>
+C. Compilation fails <br>
 D. An exception occurs at runtime
 
 
@@ -563,10 +563,10 @@ public class Question_1_4 {
 }
 ```
 
-Which of the following is true?
-A. Attribute list contains one element after main is executed
-B. The class is immutable
-C. Compilation fails
+Which of the following is true? <br>
+A. Attribute list contains one element after main is executed <br>
+B. The class is immutable <br>
+C. Compilation fails <br>
 D. An exception occurs at runtime
 
 
@@ -583,10 +583,10 @@ public class Question_1_5 {
 }
 ```
 
-What is the result?
-A. Hi
-B. Bye
-C. Compilation fails on the declaration marked as // 1
+What is the result? <br>
+A. Hi <br>
+B. Bye <br>
+C. Compilation fails on the declaration marked as // 1 <br>
 D. Compilation fails on the declaration marked as // 2
 
 
@@ -609,10 +609,10 @@ public class Question_1_6 {
 }
 ```
 
-What is the result?
-A. 0
-B. 3
-C. 2
+What is the result? <br>
+A. 0 <br>
+B. 3 <br>
+C. 2 <br>
 D. Compilation fails
 
 
