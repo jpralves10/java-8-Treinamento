@@ -2,9 +2,9 @@
 
 ## Objetivos do Exame
 
-*Implement inheritance including visibility modifiers and composition.*
-*Override hashCode, equals, and toString methods from Object class.*
-*Implement polymorphism.*
+*Implement inheritance including visibility modifiers and composition.* <br>
+*Override hashCode, equals, and toString methods from Object class.* <br>
+*Implement polymorphism.* <br>
 *Develop code that uses abstract classes and methods.*
 
 
@@ -479,10 +479,168 @@ abstract class AClass implements Runnable {}
 * Herança se refere a um relacionamento IS-A em que uma classe (chamada de superclasse) fornece atributos e métodos comuns para classes derivadas ou mais especializadas (chamadas de subclasse).
 * Aqui estão as coisas que você pode fazer em uma subclasse:
 * * Os atributos herdados podem ser usados ​​diretamente, como qualquer outro.
+* * Um atributo pode ser declarado na subclasse com o mesmo nome que o da superclasse, ocultando-o assim.
+* * Novos atributos que não estão na superclasse podem ser declarados na subclasse.
+* * Os métodos herdados podem ser usados ​​diretamente como estão.
+* * Um novo método de instância pode ser declarado na subclasse que possui a mesma assinatura que o da superclasse, substituindo-o assim.
+* * Um novo método estático pode ser declarado na subclasse que possui a mesma assinatura que o da superclasse, ocultando-o assim.
+* * Novos métodos que não estão na superclasse podem ser declarados na subclasse.
+* * Um construtor pode ser declarado na subclasse que invoca o construtor da superclasse, implicitamente ou usando a palavra-chave super.
+* A assinatura do método é o nome do método e a lista de seus parâmetros (tipos e número de parâmetros incluídos). Os tipos de retorno não estão incluídos nesta definição.
+* Falamos em sobrecarga quando um método altera a lista de parâmetros de outro método (que podem ser herdados) enquanto mantém o mesmo nome.
+* Falamos sobre sobrescrever quando a assinatura do método é a mesma, mas por algum motivo, queremos redefinir um método INSTANCE na subclasse.
+* The most important methods of java.lang.Object that most classes must redefine are:
+* * public int hashCode()
+* * public boolean equals(Object obj)
+* * public String toString()
+* Com o polimorfismo, as subclasses podem definir seus próprios comportamentos (diferentes dos métodos da superclasse), e a JVM chamará o método apropriado para o objeto. Esse comportamento é conhecido como invocação de método virtual.
+* Classes abstratas NÃO PODEM ser instanciadas, apenas subclasses. Os métodos abstratos são declarados SEM uma implementação (corpo).
+* A palavra-chave abstract só pode ser aplicada a classes ou métodos não estáticos.
+* Uma classe abstrata não precisa declarar métodos abstratos para serem declarados abstratos.
+* Se uma classe inclui métodos abstratos, a própria classe deve ser declarada abstrata.
+* Se a subclasse de uma classe abstrata não fornece uma implementação para todos os métodos abstratos, a subclasse também deve ser declarada abstrata.
+* Os métodos de uma interface são considerados abstratos, portanto, uma classe abstrata que implementa uma interface pode implementar alguns ou nenhum dos métodos de interface.
 
 
+### Self Test
+
+1. Given:
+
+```
+public class Question_2_1 {
+    protected int id;
+    protected String name;
+
+    protected boolean equals(Question_2_1 q) {
+        return this.name.equals(q.name);
+    }
+
+    public static void main(String[] args) {
+        Question_2_1 q1 = new Question_2_1();
+        Question_2_1 q2 = new Question_2_1();
+        q1.name = "q1";
+        q2.name = "q1";
+
+        if(q1.equals((Object)q2)) {
+            System.out.println("true");
+        } else {
+            System.out.println("false");
+        }
+    }
+}
+```
+
+What is the result? <br>
+A. true <br>
+B. false <br>
+C. Compilation fails <br>
+D. An exception occurs at runtime
 
 
+2. Which of the following is a method of java.lang.Object that can be overridden? <br>
+A. public String toString(Object obj) <br>
+B. public int equals(Object obj) <br>
+C. public int hashCode(Object obj) <br>
+D. public int hashCode()
+
+
+3. Given:
+
+```
+public class Question_2_3 {
+    public static void print(Integer i) {
+        System.out.println("Integer");
+    }
+    public static void print(Object o) {
+        System.out.println("Object");
+    }
+    public static void main(String[] args) {
+        print(null);
+    }
+}
+```
+
+What is the result? <br>
+A. Integer <br>
+B. Object <br>
+C. Compilation fails <br>
+D. An exception occurs at runtime
+
+
+4. Given:
+
+```
+class SuperClass {
+    public static void print() {
+        System.out.println("Superclass");
+    }
+}
+public class Question_2_4 extends SuperClass {
+    public static void print() {
+        System.out.println("Subclass");
+    }
+    public static void main(String[] args) {
+        print();
+    }
+}
+```
+
+What is the result? <br>
+A. Superclass <br>
+B. Subclass <br>
+C. Compilation fails <br>
+D. An exception occurs at runtime
+
+
+5. Given:
+
+```
+abstract class SuperClass2 {
+    public static void print() {
+        System.out.println("Superclass");
+    }
+}
+class SubClass extends SuperClass2 {}
+public class Question_2_5 {
+    public static void main(String[] args) {
+        SubClass subclass = new SubClass();
+        subclass.print();
+    }
+}
+```
+
+What is the result? <br>
+A. Superclass <br>
+B. Compilation fails because an abstract class cannot have static methods <br>
+C. Compilation fails because Subclass doesn't implement method print() <br>
+D. Compilation fails because Subclass doesn't have a method print() <br>
+E. An exception occurs at runtime
+
+
+6. Given:
+
+```
+abstract class SuperClass3 {
+    public void print() {
+        System.out.println("Superclass");
+    }
+}
+public class Question_2_6 extends SuperClass3 {
+    public void print() {
+        System.out.println("Subclass");
+    }
+    public static void main(String[] args) {
+        Question_2_6 q = new Question_2_6();
+        ((SuperClass3)q).print();
+    }
+}
+```
+
+What is the result? <br>
+A. Superclass <br>
+B. Subclass <br>
+C. Compilation fails <br>
+D. An exception occurs at runtime
 
 
 
