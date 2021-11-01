@@ -539,10 +539,10 @@ public class Question_6_1 {
 }
 ```
 
-What is the result?
-A. [20, 20]
-B. Compilation fails on the line marked as // 1
-C. Compilation fails on the line marked as // 2
+What is the result? <br>
+A. [20, 20] <br>
+B. Compilation fails on the line marked as // 1 <br>
+C. Compilation fails on the line marked as // 2 <br>
 D. An exception occurs at runtime
 
 
@@ -560,17 +560,17 @@ public class Question_6_2 <T extends Number> {
 }
 ```
 
-What is the result?
-A. 1.0
-B. Compilation fails on the line marked as // 1
-C. Compilation fails on the line marked as // 2
+What is the result? <br>
+A. 1.0 <br>
+B. Compilation fails on the line marked as // 1 <br>
+C. Compilation fails on the line marked as // 2 <br>
 D. An exception occurs at runtime
 
 
-3. Which of the following declarations don't compile?
-A. List<?> l1 = new ArrayList<>();
-B. List<String> l2 = new ArrayList();
-C. List<? super Object> l3 = new ArrayList<String>();
+3. Which of the following declarations don't compile? <br>
+A. List<?> l1 = new ArrayList<>(); <br>
+B. List<String> l2 = new ArrayList(); <br>
+C. List<? super Object> l3 = new ArrayList<String>(); <br>
 D. List<? extends Object> l4 = new ArrayList<String>();
 
 
@@ -582,10 +582,10 @@ list.add(new Integer(2)); // 2
 list.add(new Object()); // 3
 ```
 
-Which line will generate a compile-time error?
-A. Line marked as // 1
-B. Line marked as // 2
-C. Line marked as // 3
+Which line will generate a compile-time error? <br>
+A. Line marked as // 1 <br>
+B. Line marked as // 2 <br>
+C. Line marked as // 3 <br>
 D. No compile-time error is generated
 
 
