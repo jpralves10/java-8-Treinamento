@@ -8,38 +8,47 @@ $(document).ready(function() {
 		  <ul class="dropdown-menu"> \
 			<li class="column-menu"> \
 			  <ul> \
+				<li>--- 1 Part - Class Design ---</li> \
 				<li><a tabindex="-1" href="ch01.html">1. Encapsulation and Immutable Classes</a></li> \
 				<li><a tabindex="-1" href="ch02.html">2. Inheritance and Polymorphism</a></li> \
 				<li><a tabindex="-1" href="ch03.html">3. Inner Classes</a></li> \
 				<li><a tabindex="-1" href="ch04.html">4. Interfaces</a></li> \
 				<li><a tabindex="-1" href="ch05.html">5. Enumerations</a></li> \
+				<li>--- 2 Part - Generics and Collections ---</li> \
 				<li><a tabindex="-1" href="ch06.html">6. Generics</a></li> \
 				<li><a tabindex="-1" href="ch07.html">7. Collections</a></li> \
+				<li>--- 3 Part - Lambda Expressions ---</li> \
 				<li><a tabindex="-1" href="ch08.html">8. Functional Interfaces</a></li> \
 				<li><a tabindex="-1" href="ch09.html">9. Lambda Expressions</a></li> \
 				<li><a tabindex="-1" href="ch10.html">10. Java Built-In Lambda Interfaces</a></li> \
 				<li><a tabindex="-1" href="ch11.html">11. Method References</a></li> \
+				<li>--- 4 Part - Streams and Collections ---</li> \
 				<li><a tabindex="-1" href="ch12.html">12. Streams</a></li> \
 				<li><a tabindex="-1" href="ch13.html">13. Iterating and Filtering Collections</a></li> \
 				<li><a tabindex="-1" href="ch14.html">14. Optional Class</a></li> \
 				<li><a tabindex="-1" href="ch15.html">15. Data Search</a></li> \
 				<li><a tabindex="-1" href="ch16.html">16. Stream Operations on Collections</a></li> \
+				<li><a tabindex="-1" href="ch17.html">17. Peeking, Mapping, Reducing and Collecting</a></li> \
+				<li><a tabindex="-1" href="ch18.html">18. Parallel Streams</a></li> \
 			  </ul> \
 			</li> \
 			<li class="column-menu"> \
 			  <ul> \
-				<li><a tabindex="-1" href="ch17.html">17. Peeking, Mapping, Reducing and Collecting</a></li> \
-				<li><a tabindex="-1" href="ch18.html">18. Parallel Streams</a></li> \
+				<li>--- 5 Part - Exceptions and Assertions ---</li> \
 				<li><a tabindex="-1" href="ch19.html">19. Exceptions</a></li> \
 				<li><a tabindex="-1" href="ch20.html">20. Assertions</a></li> \
+				<li>--- 6 Part - Date/Time API ---</li> \
 				<li><a tabindex="-1" href="ch21.html">21. Core Date/Time Classes</a></li> \
 				<li><a tabindex="-1" href="ch22.html">22. Time Zones and Daylight Savings</a></li> \
+				<li>--- 7 Part - Java I/O ---</li> \
 				<li><a tabindex="-1" href="ch23.html">23. Java I/O Fundamentals</a></li> \
 				<li><a tabindex="-1" href="ch24.html">24. NIO.2</a></li> \
 				<li><a tabindex="-1" href="ch25.html">25. Files and Streams</a></li> \
+				<li>--- 8 Part - Concurrency ---</li> \
 				<li><a tabindex="-1" href="ch26.html">26. Thread Basics</a></li> \
 				<li><a tabindex="-1" href="ch27.html">27. Concurrency</a></li> \
 				<li><a tabindex="-1" href="ch28.html">28. Fork/Join Framework</a></li> \
+				<li>--- 9 Part - JDBC and Localization ---</li> \
 				<li><a tabindex="-1" href="ch29.html">29. JDBC API</a></li> \
 				<li><a tabindex="-1" href="ch30.html">30. Localization</a></li> \
 				<li><a tabindex="-1" href="upgrade.html">Upgrade from Java 6/7</a></li> \
